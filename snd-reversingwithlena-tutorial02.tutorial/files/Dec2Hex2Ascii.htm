@@ -1,0 +1,553 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0047)http://fly.hiwaay.net/~jfrohwei/tech/table.html -->
+<HTML><HEAD><TITLE>Decimal to Hex to ASCII Conversion</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4134.600" name=GENERATOR></HEAD>
+<BODY background="Decimal to Hex to ASCII Conversion_bestanden/pbbg.gif">
+<H2>Decimal to Hex to ASCII Conversion </H2>
+<TABLE align=center border=1>
+  <TBODY>
+  <TR>
+    <TD COLSTART="1">Dec</TD>
+    <TD COLSTART="2">Hex</TD>
+    <TD COLSTART="3">ASCII</TD>
+    <TD COLSTART="4">____</TD>
+    <TD COLSTART="5">Dec</TD>
+    <TD COLSTART="6">Hex</TD>
+    <TD COLSTART="7">ASCII</TD>
+    <TD COLSTART="8">____</TD>
+    <TD COLSTART="9">Dec</TD>
+    <TD COLSTART="10">Hex</TD>
+    <TD COLSTART="11">ASCII</TD>
+    <TD COLSTART="12">____</TD>
+    <TD COLSTART="13">Dec </TD>
+    <TD COLSTART="14">Hex</TD>
+    <TD COLSTART="15">ASCII</TD></TR>
+  <TR>
+    <TD COLSTART="1"></TD>
+    <TD COLSTART="2"></TD>
+    <TD COLSTART="3"></TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5"></TD>
+    <TD COLSTART="6"></TD>
+    <TD COLSTART="7"></TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9"></TD>
+    <TD COLSTART="10"></TD>
+    <TD COLSTART="11"></TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13"></TD>
+    <TD COLSTART="14"></TD>
+    <TD COLSTART="15"></TD></TR>
+  <TR>
+    <TD align=middle COLSTART="1">0</TD>
+    <TD COLSTART="2">00</TD>
+    <TD align=middle COLSTART="3">NUL</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">32 </TD>
+    <TD COLSTART="6">20</TD>
+    <TD align=middle COLSTART="7">SP</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">64</TD>
+    <TD COLSTART="10">40</TD>
+    <TD align=middle COLSTART="11">@</TD>
+    <TD COLSTART="12"></TD>
+    <TD align=middle COLSTART="13">96</TD>
+    <TD COLSTART="14">60</TD>
+    <TD align=middle COLSTART="15">'</TD></TR>
+  <TR>
+    <TD align=middle COLSTART="1">1 </TD>
+    <TD COLSTART="2">01</TD>
+    <TD align=middle COLSTART="3">SOH</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">33</TD>
+    <TD COLSTART="6">21</TD>
+    <TD align=middle COLSTART="7">!</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">65 </TD>
+    <TD COLSTART="10">41</TD>
+    <TD align=middle COLSTART="11">A</TD>
+    <TD COLSTART="12"></TD>
+    <TD align=middle COLSTART="13">97</TD>
+    <TD COLSTART="14">61 </TD>
+    <TD align=middle COLSTART="15">a</TD></TR>
+  <TR>
+    <TD align=middle COLSTART="1">2</TD>
+    <TD COLSTART="2">02</TD>
+    <TD align=middle COLSTART="3">STX</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">34 </TD>
+    <TD COLSTART="6">22</TD>
+    <TD align=middle COLSTART="7">"</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">66</TD>
+    <TD COLSTART="10">42</TD>
+    <TD align=middle COLSTART="11">B</TD>
+    <TD COLSTART="12"></TD>
+    <TD align=middle COLSTART="13">98</TD>
+    <TD COLSTART="14">62</TD>
+    <TD align=middle COLSTART="15">b</TD></TR>
+  <TR>
+    <TD align=middle COLSTART="1">3 </TD>
+    <TD COLSTART="2">03</TD>
+    <TD align=middle COLSTART="3">ETX</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">35</TD>
+    <TD COLSTART="6">23</TD>
+    <TD align=middle COLSTART="7">#</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">67 </TD>
+    <TD COLSTART="10">43</TD>
+    <TD align=middle COLSTART="11">C</TD>
+    <TD COLSTART="12"></TD>
+    <TD align=middle COLSTART="13">99</TD>
+    <TD COLSTART="14">63 </TD>
+    <TD align=middle COLSTART="15">c</TD></TR>
+  <TR>
+    <TD align=middle COLSTART="1">4</TD>
+    <TD COLSTART="2">04</TD>
+    <TD align=middle COLSTART="3">EOT</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">36 </TD>
+    <TD COLSTART="6">24</TD>
+    <TD align=middle COLSTART="7">$</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">68</TD>
+    <TD COLSTART="10">44</TD>
+    <TD align=middle COLSTART="11">D</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">100 </TD>
+    <TD COLSTART="14">64</TD>
+    <TD align=middle COLSTART="15">d</TD></TR>
+  <TR>
+    <TD align=middle COLSTART="1">5</TD>
+    <TD COLSTART="2">05</TD>
+    <TD align=middle COLSTART="3">ENQ</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">37 </TD>
+    <TD COLSTART="6">25</TD>
+    <TD align=middle COLSTART="7">%</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">69</TD>
+    <TD COLSTART="10">45</TD>
+    <TD align=middle COLSTART="11">E</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">101 </TD>
+    <TD COLSTART="14">65</TD>
+    <TD align=middle COLSTART="15">e</TD></TR>
+  <TR>
+    <TD align=middle COLSTART="1">6</TD>
+    <TD COLSTART="2">06</TD>
+    <TD align=middle COLSTART="3">ACK</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">38 </TD>
+    <TD COLSTART="6">26</TD>
+    <TD align=middle COLSTART="7">&amp;</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">70</TD>
+    <TD COLSTART="10">46</TD>
+    <TD align=middle COLSTART="11">F</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">102 </TD>
+    <TD COLSTART="14">66</TD>
+    <TD align=middle COLSTART="15">f</TD></TR>
+  <TR>
+    <TD align=middle COLSTART="1">7</TD>
+    <TD COLSTART="2">07</TD>
+    <TD align=middle COLSTART="3">BEL</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">39 </TD>
+    <TD COLSTART="6">27</TD>
+    <TD align=middle COLSTART="7">'</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">71</TD>
+    <TD COLSTART="10">47</TD>
+    <TD align=middle COLSTART="11">G</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">103 </TD>
+    <TD COLSTART="14">67</TD>
+    <TD align=middle COLSTART="15">g</TD></TR>
+  <TR>
+    <TD align=middle COLSTART="1">8</TD>
+    <TD COLSTART="2">08</TD>
+    <TD align=middle COLSTART="3">BS</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">40 </TD>
+    <TD COLSTART="6">28</TD>
+    <TD align=middle COLSTART="7">(</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">72</TD>
+    <TD COLSTART="10">48</TD>
+    <TD align=middle COLSTART="11">H</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">104 </TD>
+    <TD COLSTART="14">68</TD>
+    <TD align=middle COLSTART="15">h</TD></TR>
+  <TR>
+    <TD align=middle COLSTART="1">9</TD>
+    <TD COLSTART="2">09</TD>
+    <TD align=middle COLSTART="3">HT</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">41 </TD>
+    <TD COLSTART="6">29</TD>
+    <TD align=middle COLSTART="7">)</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">73</TD>
+    <TD COLSTART="10">49</TD>
+    <TD align=middle COLSTART="11">I</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">105 </TD>
+    <TD COLSTART="14">69</TD>
+    <TD align=middle COLSTART="15">i</TD></TR>
+  <TR>
+    <TD COLSTART="1">10</TD>
+    <TD COLSTART="2">0A</TD>
+    <TD align=middle COLSTART="3">LF </TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">42</TD>
+    <TD COLSTART="6">2A</TD>
+    <TD align=middle COLSTART="7">*</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">74 </TD>
+    <TD COLSTART="10">4A</TD>
+    <TD align=middle COLSTART="11">J</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">106</TD>
+    <TD COLSTART="14">6A</TD>
+    <TD align=middle COLSTART="15">j</TD></TR>
+  <TR>
+    <TD COLSTART="1">11</TD>
+    <TD COLSTART="2">0B</TD>
+    <TD align=middle COLSTART="3">VT</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">43</TD>
+    <TD COLSTART="6">2B</TD>
+    <TD align=middle COLSTART="7">+</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">75 </TD>
+    <TD COLSTART="10">4B</TD>
+    <TD align=middle COLSTART="11">K</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">107</TD>
+    <TD COLSTART="14">6B</TD>
+    <TD align=middle COLSTART="15">k</TD></TR>
+  <TR>
+    <TD COLSTART="1">12</TD>
+    <TD COLSTART="2">0C</TD>
+    <TD align=middle COLSTART="3">FF</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">44</TD>
+    <TD COLSTART="6">2C</TD>
+    <TD align=middle COLSTART="7">,</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">76 </TD>
+    <TD COLSTART="10">4C</TD>
+    <TD align=middle COLSTART="11">L</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">108</TD>
+    <TD COLSTART="14">6C</TD>
+    <TD align=middle COLSTART="15">l</TD></TR>
+  <TR>
+    <TD COLSTART="1">13</TD>
+    <TD COLSTART="2">0D</TD>
+    <TD align=middle COLSTART="3">CR</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">45</TD>
+    <TD COLSTART="6">2D</TD>
+    <TD align=middle COLSTART="7">-</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">77 </TD>
+    <TD COLSTART="10">4D</TD>
+    <TD align=middle COLSTART="11">M</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">109</TD>
+    <TD COLSTART="14">6D</TD>
+    <TD align=middle COLSTART="15">m</TD></TR>
+  <TR>
+    <TD COLSTART="1">14</TD>
+    <TD COLSTART="2">0E</TD>
+    <TD align=middle COLSTART="3">SO</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">46</TD>
+    <TD COLSTART="6">2E</TD>
+    <TD align=middle COLSTART="7">.</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">78 </TD>
+    <TD COLSTART="10">4E</TD>
+    <TD align=middle COLSTART="11">N</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">110</TD>
+    <TD COLSTART="14">6E</TD>
+    <TD align=middle COLSTART="15">n</TD></TR>
+  <TR>
+    <TD COLSTART="1">15</TD>
+    <TD COLSTART="2">0F</TD>
+    <TD align=middle COLSTART="3">SI</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">47</TD>
+    <TD COLSTART="6">2F</TD>
+    <TD align=middle COLSTART="7">/</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">79 </TD>
+    <TD COLSTART="10">4F</TD>
+    <TD align=middle COLSTART="11">O</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">111</TD>
+    <TD COLSTART="14">6F</TD>
+    <TD align=middle COLSTART="15">o</TD></TR>
+  <TR>
+    <TD COLSTART="1">16</TD>
+    <TD COLSTART="2">10</TD>
+    <TD align=middle COLSTART="3">DLE</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">48</TD>
+    <TD COLSTART="6">30</TD>
+    <TD align=middle COLSTART="7">0</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">80 </TD>
+    <TD COLSTART="10">50</TD>
+    <TD align=middle COLSTART="11">P</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">112</TD>
+    <TD COLSTART="14">70</TD>
+    <TD align=middle COLSTART="15">p</TD></TR>
+  <TR>
+    <TD COLSTART="1">17</TD>
+    <TD COLSTART="2">11</TD>
+    <TD align=middle COLSTART="3">DC1</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">49</TD>
+    <TD COLSTART="6">31</TD>
+    <TD align=middle COLSTART="7">1</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">81 </TD>
+    <TD COLSTART="10">51</TD>
+    <TD align=middle COLSTART="11">Q</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">113</TD>
+    <TD COLSTART="14">71</TD>
+    <TD align=middle COLSTART="15">q</TD></TR>
+  <TR>
+    <TD COLSTART="1">18</TD>
+    <TD COLSTART="2">12</TD>
+    <TD align=middle COLSTART="3">DC2</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">50</TD>
+    <TD COLSTART="6">32</TD>
+    <TD align=middle COLSTART="7">2</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">82 </TD>
+    <TD COLSTART="10">52</TD>
+    <TD align=middle COLSTART="11">R</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">114</TD>
+    <TD COLSTART="14">72</TD>
+    <TD align=middle COLSTART="15">r</TD></TR>
+  <TR>
+    <TD COLSTART="1">19</TD>
+    <TD COLSTART="2">13</TD>
+    <TD align=middle COLSTART="3">DC3</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">51</TD>
+    <TD COLSTART="6">33</TD>
+    <TD align=middle COLSTART="7">3</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">83 </TD>
+    <TD COLSTART="10">53</TD>
+    <TD align=middle COLSTART="11">S</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">115</TD>
+    <TD COLSTART="14">73</TD>
+    <TD align=middle COLSTART="15">s</TD></TR>
+  <TR>
+    <TD COLSTART="1">20</TD>
+    <TD COLSTART="2">14</TD>
+    <TD align=middle COLSTART="3">DC4</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">52</TD>
+    <TD COLSTART="6">34</TD>
+    <TD align=middle COLSTART="7">4</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">84 </TD>
+    <TD COLSTART="10">54</TD>
+    <TD align=middle COLSTART="11">T</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">116</TD>
+    <TD COLSTART="14">74</TD>
+    <TD align=middle COLSTART="15">t</TD></TR>
+  <TR>
+    <TD COLSTART="1">21</TD>
+    <TD COLSTART="2">15</TD>
+    <TD align=middle COLSTART="3">NAK</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">53</TD>
+    <TD COLSTART="6">35</TD>
+    <TD align=middle COLSTART="7">5</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">85 </TD>
+    <TD COLSTART="10">55</TD>
+    <TD align=middle COLSTART="11">U</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">117</TD>
+    <TD COLSTART="14">75</TD>
+    <TD align=middle COLSTART="15">u</TD></TR>
+  <TR>
+    <TD COLSTART="1">22</TD>
+    <TD COLSTART="2">16</TD>
+    <TD align=middle COLSTART="3">SYN</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">54</TD>
+    <TD COLSTART="6">36</TD>
+    <TD align=middle COLSTART="7">6</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">86 </TD>
+    <TD COLSTART="10">56</TD>
+    <TD align=middle COLSTART="11">V</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">118</TD>
+    <TD COLSTART="14">76</TD>
+    <TD align=middle COLSTART="15">v</TD></TR>
+  <TR>
+    <TD COLSTART="1">23</TD>
+    <TD COLSTART="2">17</TD>
+    <TD align=middle COLSTART="3">ETB</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">55</TD>
+    <TD COLSTART="6">37</TD>
+    <TD align=middle COLSTART="7">7</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">87 </TD>
+    <TD COLSTART="10">57</TD>
+    <TD align=middle COLSTART="11">W</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">119</TD>
+    <TD COLSTART="14">77</TD>
+    <TD align=middle COLSTART="15">w</TD></TR>
+  <TR>
+    <TD COLSTART="1">24</TD>
+    <TD COLSTART="2">18</TD>
+    <TD align=middle COLSTART="3">CAN</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">56</TD>
+    <TD COLSTART="6">38</TD>
+    <TD align=middle COLSTART="7">8</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">88 </TD>
+    <TD COLSTART="10">58</TD>
+    <TD align=middle COLSTART="11">X</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">120</TD>
+    <TD COLSTART="14">78</TD>
+    <TD align=middle COLSTART="15">x</TD></TR>
+  <TR>
+    <TD COLSTART="1">25</TD>
+    <TD COLSTART="2">19</TD>
+    <TD align=middle COLSTART="3">EM</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">57</TD>
+    <TD COLSTART="6">39</TD>
+    <TD align=middle COLSTART="7">9</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">89 </TD>
+    <TD COLSTART="10">59</TD>
+    <TD align=middle COLSTART="11">Y</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">121</TD>
+    <TD COLSTART="14">79</TD>
+    <TD align=middle COLSTART="15">y</TD></TR>
+  <TR>
+    <TD COLSTART="1">26</TD>
+    <TD COLSTART="2">1A</TD>
+    <TD align=middle COLSTART="3">SUB</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">58</TD>
+    <TD COLSTART="6">3A</TD>
+    <TD align=middle COLSTART="7">:</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">90 </TD>
+    <TD COLSTART="10">5A</TD>
+    <TD align=middle COLSTART="11">Z</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">122</TD>
+    <TD COLSTART="14">7A</TD>
+    <TD align=middle COLSTART="15">z</TD></TR>
+  <TR>
+    <TD COLSTART="1">27</TD>
+    <TD COLSTART="2">1B</TD>
+    <TD align=middle COLSTART="3">ESC</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">59</TD>
+    <TD COLSTART="6">3B</TD>
+    <TD align=middle COLSTART="7">;</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">91 </TD>
+    <TD COLSTART="10">5B</TD>
+    <TD align=middle COLSTART="11">[</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">123</TD>
+    <TD COLSTART="14">7B</TD>
+    <TD align=middle COLSTART="15">{</TD></TR>
+  <TR>
+    <TD COLSTART="1">28</TD>
+    <TD COLSTART="2">1C</TD>
+    <TD align=middle COLSTART="3">FS</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">60</TD>
+    <TD COLSTART="6">3C</TD>
+    <TD align=middle COLSTART="7">&lt;</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">92 </TD>
+    <TD COLSTART="10">5C</TD>
+    <TD align=middle COLSTART="11">\</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">124</TD>
+    <TD COLSTART="14">7C</TD>
+    <TD align=middle COLSTART="15">|</TD></TR>
+  <TR>
+    <TD COLSTART="1">29</TD>
+    <TD COLSTART="2">1D</TD>
+    <TD align=middle COLSTART="3">GS</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">61</TD>
+    <TD COLSTART="6">3D</TD>
+    <TD align=middle COLSTART="7">=</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">93 </TD>
+    <TD COLSTART="10">5D</TD>
+    <TD align=middle COLSTART="11">]</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">125</TD>
+    <TD COLSTART="14">7D</TD>
+    <TD align=middle COLSTART="15">}</TD></TR>
+  <TR>
+    <TD COLSTART="1">30</TD>
+    <TD COLSTART="2">1E</TD>
+    <TD align=middle COLSTART="3">RS</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">62</TD>
+    <TD COLSTART="6">3E</TD>
+    <TD align=middle COLSTART="7">&gt;</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">94 </TD>
+    <TD COLSTART="10">5E</TD>
+    <TD align=middle COLSTART="11">^</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">126</TD>
+    <TD COLSTART="14">7E</TD>
+    <TD align=middle COLSTART="15">~</TD></TR>
+  <TR>
+    <TD COLSTART="1">31</TD>
+    <TD COLSTART="2">1F</TD>
+    <TD align=middle COLSTART="3">US</TD>
+    <TD COLSTART="4"></TD>
+    <TD COLSTART="5">63</TD>
+    <TD COLSTART="6">3F</TD>
+    <TD align=middle COLSTART="7">?</TD>
+    <TD COLSTART="8"></TD>
+    <TD COLSTART="9">95 </TD>
+    <TD COLSTART="10">5F</TD>
+    <TD align=middle COLSTART="11">_</TD>
+    <TD COLSTART="12"></TD>
+    <TD COLSTART="13">127</TD>
+    <TD COLSTART="14">7F</TD>
+    <TD align=middle COLSTART="15">DEL</TD></TR></TBODY></TABLE></BODY></HTML>

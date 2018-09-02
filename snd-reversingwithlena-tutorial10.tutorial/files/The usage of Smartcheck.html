@@ -1,0 +1,161 @@
+<HTML><HEAD><TITLE>SmartCheck Usage</TITLE></HEAD><BODY link="#FF0099" vlink="#33FFFF" alink="#FF99FF"><CENTER>
+<font face="Verdana"><B><U><FONT size=+2>Reversing Visual Basic </FONT></U></B> <BR><B><FONT size=+1>(</FONT><U><FONT size=+1>SmartCheck Information</FONT></U></B>
+<B><FONT size=+1>)</FONT></B></font></CENTER> <HR WIDTH="100%"> 
+<P> &nbsp;<P> <font face="Verdana"> <B>General advice on 
+reversing VB using SmartCheck (with OllyDbg) :</B> </font> <P> <font face="Verdana">SmartCheck is a very useful program 
+for reversing VB registration schemes and it's worth learning how to use it.</font><P> 
+<font face="Verdana">Always study the behaviour of a program, run the program a few times and see what messages are shown. 
+Study the way the program acts. It can't be repeated enough : good study of the 
+program can drastically reduce the amount of time needed for reversing 
+afterwards... . For that, you can use debuggers, disassemblers, VB decompilers. 
+Then comes SmartCheck in action. For general settings of SmartCheck, 
+see Part09 in this series. After running once and trying to register with some 
+bogus code, note down the Badboy and close the program (not SmartCheck). When you choose "Show All Events", a whole 
+ocean of information can be seen. And it is very easy 
+to mis the lines you need. Hence, click on the line you want to study before choosing "Show All Events". Usually, 
+this is xxxxxx_Click in which xxxxxx is the name of the button refered to by the program. For programmers that 
+didn't change the button's name, it is usually CommandX_Click where X starts from 1. 
+Mostly, you will find the serial this way (often after mathematical 
+calculations). </font> <P> <font face="Verdana" size="4">A couple of basic rules 
+if you can't find the serial at first in SmartCheck :</font><P> 
+<font face="Verdana">1. Look first for the most used VB API's :&nbsp; 
+__vbavartsteq, __vbastrcmp and 
+__vbastrcomp. Perhaps you find the correct code compared to the one you entered. 
+BTW, &quot;__&quot; is a double &quot;_&quot;.</font><P> <font face="Verdana">2. If you can't find one of these 3, most probably the program uses the other comparison methods 
+(see below). 
+In that case, go through the lines and look for the Badboy message. A few lines above it, 
+search for one or more of the VB commands (APIs) that you can use to breakpoint 
+in Olly (see below). Start from the one nearest to the Badboy message line. Search 
+how many breakpoints you find between clicking register button and&nbsp; the 
+Badboy message (manually or with the search function in SmartCheck). Now use 
+Olly to break at the same place before the Badboy and keep this BP. This works 
+because Smartcheck notes the lines 
+down like they are executed in the program ! </font>
+<P> <font face="Verdana">For example, if you set a BP on __vbafreestr, there might be a lot of them used after you click on the register button. And if the specific breakpoint you want, is shown 
+as 10th __vbafreestr in SmartCheck, you have to press F9 nine times 
+in Olly to get to the 10th __vbafreestr. </font> <P> <font face="Verdana">3. Run the program, enter 
+your bogus registration key and click to register. Olly breaks unless you set the breakpoint wrongly.</font><P> 
+<font face="Verdana">4. Trace into EVERY call if necessary. Usually, it won't take long since you are near to the 
+Badboy message. If you did not come across anything suspicious, go back to SmartCheck and look for the breakpoint 
+just before this one. The investigated breakpoint might be after the compare routine.
+</font>
+<P> 
+&nbsp;<CENTER>
+&nbsp;</CENTER> <HR WIDTH="100%"> 
+<P> <u><font size="5"><b>The following is some code you will encounter in 
+SmartCheck.</b></font></u><P> <font face="Verdana">This is some important code 
+you will find in Smartcheck. Try to understand it. It's really not that 
+difficult. 
+</font>
+<P> <font face="Verdana">I've used <B>BOLD</B> words to show what you see in SmartCheck. Words in <B><FONT color="#FF0000">RED</FONT></B><FONT color="#000000"> mean that you have to take special note of them.</FONT> 
+</font>
+<P> &nbsp;<P> <HR WIDTH="25%"> 
+<P> <P> <font face="Verdana"> <B>Len(String:"<font color="#FF0000">lena151</font>") returns LONG:<FONT color="#FF0000">7</FONT></B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Get length of String "lena151" which is 7</font><P> <HR WIDTH="25%"> <P> <font face="Verdana"> <B>Asc(String:"<FONT color="#FF0000">T</FONT>") returns Integer:<FONT color="#FF0000">84</FONT></B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Get the decimal value of T which is 84</font><P> <HR WIDTH="25%"> 
+<P> <b><font face="Verdana"> Mid$(String:&quot;54321&quot;,long:<font color="#FF0000">4</font>,VARIANT:Integer:<font color="#FF0000">1</font>)</font></b><P> <font face="Verdana"> <U>Explanation:</U> <BR>
+Get the fourth char from the string 54321 which is 2</font><P> <HR WIDTH="25%"> <P> 
+<b><font face="Verdana">Left(VARIANT:VT_DISPATCH:....., long:<font color="#FF0000">3</font>)</font></b><P> <font face="Verdana"> <U>Explanation:</U> <BR>
+Get the third char from the left</font><P> <HR WIDTH="25%"> <P> 
+<font face="Verdana"><b>Hex$(VARIANT:Integer:<font color="#FF0000">247</font>)</b></font><P> <font face="Verdana"> <U>Explanation:</U> <BR>
+Converts 247 in hex which will give F7</font><P> <HR WIDTH="25%"> <P> 
+<font face="Verdana"> <B>__vbaVarAdd(VARIANT:Integer:<FONT color="#FF0000">2</FONT>, VARIANT:Integer:<FONT color="#FF0000">97</FONT>) returns .....</B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Add 2 and 97 which 
+gives 99 <BR>But if both are Strings instead of Integers, you will get 297 instead. 
+</font> <P> <HR WIDTH="25%"> <P> <font face="Verdana"> <B>__vbaVarDiv(VARIANT:Integer:<FONT color="#FF0000">97</FONT>, VARIANT:Long:<FONT color="#FF0000">1</FONT>) returns.....</B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Divide 97 by 1 </font> <P> <HR WIDTH="25%"> <P> 
+<font face="Verdana"> <B>__vbaVarMul(VARIANT:String:"<FONT color="#FF0000">1</FONT>", VARIANT:String:"<FONT color="#FF0000">2</FONT>") returns ...</B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Multiply 1 by 2 </font> <P> <HR WIDTH="25%"> <P> 
+<font face="Verdana"> <B>__vbaVarSub(VARIANT:String:"<FONT color="#FF0000">2</FONT>", VARIANT:String:"<FONT color="#FF0000">34</FONT>") returns ...</B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Subtract 34 from 2 
+which makes -32 </font> 
+<P> 
+<P> <HR WIDTH="25%"> <P> <font face="Verdana"> <B>****.Text eg. Text1.Text</B> <BR>If you click on the "+" sign next to it, you will get other lines under it. Look for <B>SysAllocStringLen</B>. <BR>eg.<B> SysAllocStringLen(PTR:00000000, DWORD:00000029) returns LPVOID:<FONT color="#FF0000">410584</FONT></B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Get the input you typed in the TextBox and placed it in memory location 00410584 <BR>
+Run the program in Olly and look at this address what is there. This will not 
+always work. </font> <P> <HR WIDTH="25%"> <P> <font face="Verdana"> <B>__vbastrcmp(String:"<FONT color="#FF0000">zzzzz</FONT>",String:"<FONT color="#FF0000">yyyyy</FONT>")returns DWORD:<FONT color="#FF0000">0</FONT></B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>__vbaStrCmp -- used for comparing Strings eg. "zzzzz" and "yyyyy" <BR><I>Note: you might see 
+the correct code compared to what you keyed in!</I> <BR>returns DWORD:0 -- In 
+Olly, you will see that after this comparison, eax = 0 </font> <P> <HR WIDTH="25%"> <P> 
+<font face="Verdana"> <B>__vbaFreeStr(LPBSTR:<font color="#FF0000">0063F3F0</font>)</B> <BR>Click on the "+" sign next to it and look for <B>SysFreeString</B> <BR>eg. SysFreeString(BSTR:00410584) 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>The String located at memory location 00410584 is cleared. 
+</font> <P> <HR WIDTH="25%"> <P> <font face="Verdana"> <B>__vbaVarCopy(VARIANT:String:"<FONT color="#FF0000">12345</FONT>", VARIANT:Empty) returns DWORD:63FA30</B> <BR>&nbsp;</font><P> 
+<font face="Verdana"> <U>Explanation:</U> <BR>"12345" is copied to memory location 004103CC <BR><I>This is similar to __vbaVarMove</I> 
+</font> <P> <HR WIDTH="25%"> <P> <font face="Verdana"> <B>__vbaVarForInit(VARIANT:Empty, PTR:0063F920, PTR:0063F91.....)</B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Set up a For...Next Loop <BR>There will usually be <B>__vbaVarForNext</B> somewhere below as well. 
+</font> <P> <HR WIDTH="25%"> <P> <font face="Verdana"> <B>Mid(VARIANT:String:"<FONT color="#FF0000">abcdefg</FONT>", long:<FONT color="#FF0000">1</FONT>, VARIANT:Integer:<FONT color="#FF0000">1</FONT>)</B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Get the 1st character in the string "abcdefg" starting from location 1.&nbsp; 
+</font> <P> <HR WIDTH="25%"> 
+<P> <font face="Verdana"> <b>SysAllocStringByteLen(LPSTR:004103F0, DWORD:00000002) returns LPVOID:<FONT color="#FF0000">410434</FONT></b> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>String is copied to memory location 00410434 <BR>It is usually followed by __vbaStrVarVal(VARIATN:String"?") returns DWORD:410434<B> </B> 
+</font> <P> <HR WIDTH="25%"> <P> <font face="Verdana"> <B>SysFreeString(BSTR:<FONT color="#FF0000">004103F0</FONT>)</B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Free memory location 004103F0 <BR>These lines are especially good for "serial fishing" because when you click on them and look at the right window, you will see what Strings are being freed. Correct codes/serials are sometimes shown here. 
+</font> <P> <HR WIDTH="25%"> <P> <font face="Verdana"> <B>__vbaVarCat(VARIANT:String:"<FONT color="#FF0000">aa</FONT>", VARIANT:String:"<FONT color="#FF0000">bb</FONT>") returns DWORD:63F974</B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Join "bb" to "aa" to form "aabb" 
+</font> <P> <HR WIDTH="25%"> <P> <font face="Verdana"> <B>__vbaFreeVar(VARIANT:String:"<FONT color="#FF0000">abcdefg</FONT>")</B> <BR>Click on the "+" sign next to it and look for <B>SysFreeString</B> <BR>eg. SysFreeString(BSTR:<FONT color="#FF0000">0041035C</FONT>) 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Free "abcdefg" from memory location 0041035C <BR><I>Here, if you click on the line and look at the right window, you can also see what is being freed.</I> 
+</font> <P> <HR WIDTH="25%"> <P> <font face="Verdana"> <B>__vbaVarTstEq(VARIANT:****, VARIANT:****) returns DWORD:0</B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>__vbaVarTstEq is used to compare variants. If they are not the same, DWORD=0 (so eax=0) <BR>If they are the same, DWORD will be FFFFFFFF (so eax=FFFFFFFF) <BR><I>Similar to __vbaVarCmpEq</I> 
+</font> <P> <HR WIDTH="25%"> 
+<P> <font face="Verdana"> <B>****.Text &lt;-- "<font color="#FF0000">lena151, 
+you are so stupid !</font>" (String)</B> </font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>To display the String "lena151, 
+you are so stupid !" in the Textbox </font> <P> <HR WIDTH="25%"> <P> <font face="Verdana"> <B>MsgBox(VARIANT:String:"<font color="#FF0000">lena151, 
+how stupid !</font>", Integer:0, VARIANT:String:"<FONT color="#FF0000">Wrong</FONT>",VARIANT.....)</B> 
+</font> <P> <font face="Verdana"> <U>Explanation:</U> <BR>Create a Message Box with title "Wrong" and message "lena151, 
+how stupid !&quot; <BR>&nbsp; </font>
+<P> <HR WIDTH="25%"> 
+<P> <font face="Verdana"><b>__vbaVarTstNe(VARIANT:Const Double:<font color="#FF0000">9</font>, 
+VARIANT:String:&quot;<font color="#FF0000">3</font>&quot;) returns ...</b></font><P> <font face="Verdana"> <U>Explanation:</U> <BR>
+__vbaVarTstNe means VARiant type data is TeSTed to see if they are Not Equal</font><P> &nbsp;<P> <HR WIDTH="100%"> 
+<P> &nbsp;<P> 
+<font face="Verdana"> <B><U>COMPARE METHODS AND BREAKPOINTS</U></B> </font> <P> 
+<font face="Verdana">In Visual Basic, an author has different compare methods 
+available to check for the correct serial. I will only explain the most used  
+here. 
+</font> <P> <font face="Verdana">1) <U>STRING COMPARE</U> </font> <P> 
+<font face="Verdana">In this compare method, a string eg "Correct Password" is compared to the password you entered in textbox eg "Entered Password". <BR><I>String data type consists of a sequence of contiguous characters that represent the characters themselves rather than their numeric values. A String can include letters, numbers, spaces, and punctuation. The String data type can store fixed-length strings ranging in length from 0 to approximately 63K characters and dynamic strings ranging in length from 0 to approximately 2 billion characters.</I> 
+</font> <P> <font face="Verdana">The code in VB will be: </font> <P> 
+<font face="Verdana"> <I>If "Correct Password" = "Entered Password" then</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Direct comparison of 2 Strings <BR><I>GoTo Correct Message</I> <BR><I>Else</I> <BR><I>GoTo Wrong Message</I> <BR><I>End if</I> 
+</font> <P> <font face="Verdana"> <B>Breakpoints available include:</B> <BR>__vbastrcomp or __vbastrcmp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Stands for STRing COMpare
+</font> <P> &nbsp;<P> <font face="Verdana">2) <U>VARIANT COMPARE</U> </font> <P> 
+<font face="Verdana">In this method, two variables (of Variant data type) are used to compare with each other. <BR><I>Variant data type is a special data type that can contain numeric, string, or date data as well as user-defined types and the special values Empty and Null. The Variant data type has a numeric storage size of 16 bytes and can contain data up to the range of a Decimal, or a character storage size of 22 bytes (plus string length), and can store any character text.</I> 
+</font> <P> <font face="Verdana">An example of the code is like this: </font> <P> 
+<font face="Verdana"> <I>Dim correct As Variant, entered As Variant</I>&nbsp;&nbsp;&nbsp; &lt;--Defines "correct" and "entered" as Variant <BR><I>correct = Correct Password&nbsp;</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Set "correct"as the "Correct Password" <BR><I>entered = Text1.Text</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Set "entered" as the password you entered <BR><I>If correct = entered Then</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Compare using the Variant method <BR><I>GoTo Correct Message</I> <BR><I>Else</I> <BR><I>GoTo Wrong Message</I> <BR><I>End If</I> 
+</font> <P> <font face="Verdana">In this method, the above breakpoints will not appear because the program no longer uses __vbastrcomp etc... 
+</font> <P> <font face="Verdana"> <B>Breakpoint available:</B> <BR>__vbavartsteq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Stand for VARiant TeST EQual
+</font> <P> <font face="Verdana">3) <U>LONG COMPARE</U> </font> <P> 
+<font face="Verdana">This is one of the common methods used as well. Two variables (of Long Data type) is used to compare with one another. <BR><I>Long data type is a 4-byte integer ranging in value from -2,147,483,648 to 2,147,483,647.</I> <BR>Therefore, one limitation to this method is that what is compared must consist of numbers only. (Thank goodness, thus we will see less of such protection) 
+</font> <P> <font face="Verdana">An example of the code is like this: </font> <P> 
+<font face="Verdana"> <I>Dim correct As Long, entered As Long&nbsp;</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Defines "correct" and "entered" as Long <BR><I>correct = 12345&nbsp;</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Set "correct" as the correct code <BR><I>entered = Text1.Text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Set "entered" as the entered code <BR><I>If entered = correct Then&nbsp;&nbsp;</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Compare using the Long method <BR><I>GoTo Correct Message</I> <BR><I>Else</I> <BR><I>GoTo Wrong Message</I> <BR><I>End If</I> 
+</font> <P> &nbsp;<P> <font face="Verdana">4) <U>SINGLE COMPARE</U> </font> <P> 
+<font face="Verdana">This method uses two variables of Single data type to compare with each other. <BR><I>It is a data type that stores single-precision floating-point variables as 32-bit (4-byte) floating-point numbers, ranging in value from -3.402823E38 to -1.401298E-45 for negative values, and 1.401298E-45 to 3.402823E38 for positive values.</I> <BR>Therefore, one limitation to this method is that what is compared must consist of numbers only. But sometimes, in calculations routine where your Username is converted to Serial, the correct serial can in the form of Single. 
+</font> <P> <font face="Verdana">An example of the code is like this: </font> <P> 
+<font face="Verdana"> <I>Dim correct As Single, entered As Single</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Defines "correct" and "entered" as Single <BR><I>correct = Correct Password</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Set "correct"as the "Correct Password" <BR><I>entered = Text1.Text</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Set "entered" as the password you entered <BR><I>If correct = entered Then</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Compare using the Variant method <BR><I>GoTo Correct Message</I> <BR><I>Else</I> <BR><I>GoTo Wrong Message</I> <BR><I>End If</I> 
+</font> <P> 
+&nbsp;<P> 
+<font face="Verdana">5) <U>DOUBLE COMPARE</U> </font> <P> <font face="Verdana">This method uses two variables of Double data type to compare with each other. <BR><I>It is a data type that holds double-precision floating-point numbers as 64-bit numbers in the range -1.79769313486232E308 to -4.94065645841247E-324 for negative values; 4.94065645841247E-324 to 1.79769313486232E308 for positive values.</I> <BR>As you can probably see, Double is very similar to Single. Therefore, one limitation to this method is that what is compared must consist of numbers only. But sometimes, in calculations routine where your Username is converted to Serial, the correct serial can be in the form of Double. 
+</font> <P> <font face="Verdana">An example of the code is like this: </font> <P> 
+<font face="Verdana"> <I>Dim correct As Double, entered As Double</I>&nbsp;&nbsp;&nbsp; &lt;--Defines "correct" and "entered" as Double <BR><I>correct = Correct Password</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Set "correct"as the "Correct Password" <BR><I>entered = Text1.Text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>&lt;--Set "entered" as the password you entered <BR><I>If correct = entered Then&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </I>&lt;--Compare using the Variant method <BR><I>GoTo Correct Message</I> <BR><I>Else</I> <BR><I>GoTo Wrong Message</I> <BR><I>End If</I> 
+</font> <P> <font face="Verdana">&nbsp; </font> <P> 
+<font face="Verdana">6) <U>INTEGER COMPARE</U> </font> <P> <font face="Verdana">This method uses two variables of Integer data type to compare with each other. <BR><I>It is a data type that holds integer variables stored as 2-byte whole numbers in the range -32,768 to 32,767. The Integer data type is also used to represent enumerated values.</I> <BR>Therefore, one limitation to this method is that what is compared must consist of numbers only. But sometimes, in calculations routine where your Username is converted to Serial, the correct serial can be in the form of Integer. 
+</font> <P> <font face="Verdana">An example of the code is like this: </font> <P> 
+<font face="Verdana"> <I>Dim correct As Integer, entered As Integer</I>&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Defines "correct" and "entered" as Integer <BR><I>correct = Correct Password</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Set "correct"as the "Correct Password" <BR><I>entered = Text1.Text</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Set "entered" as the password you entered <BR><I>If correct = entered Then</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Compare using the Variant method <BR><I>GoTo Correct Message</I> <BR><I>Else</I> <BR><I>GoTo Wrong Message</I> <BR><I>End If</I> 
+</font> <P> <font face="Verdana">&nbsp; </font> <P> 
+<font face="Verdana">7) <U>BYTE COMPARE</U> </font> <P> <font face="Verdana">This method uses two variables of Byte data type to compare with each other. <BR><I>It is a data type used to hold positive integer numbers ranging from 0-255. Byte variables are stored as single, unsigned 8-bit (1-byte) numbers.</I> <BR>Therefore, one limitation to this method is that what is compared must consist of numbers and only to the limit of 255. But sometimes, in calculations routine where your Username is converted to Serial, the correct serial can be in the form of Byte. 
+</font> <P> <font face="Verdana">An example of the code is like this: </font> <P> 
+<font face="Verdana"> <I>Dim correct As Byte, entered As Byte&nbsp;&nbsp;&nbsp;&nbsp; &lt;--</I>Defines "correct" and "entered" as Byte <BR><I>correct = Correct Password</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;--Set "correct"as the "Correct Password" <BR><I>entered = Text1.Text&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;--</I>Set "entered" as the password you entered <BR><I>
+If correct = entered Then&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&lt;</I>--Compare using the Variant method <BR><I>GoTo Correct Message</I> <BR><I>Else</I> <BR><I>GoTo Wrong Message</I> <BR><I>End If</I> 
+</font> <P> &nbsp;<P> <font face="Verdana">8) <U>CURRENCY COMPARE</U> 
+</font> <P> <font face="Verdana">This method uses two variables of Currency data type to compare with each other. Yes, it might sound weird, but it works!! <BR><I>It is a data type with a range of -922,337,203,685,477.5808 to 922,337,203,685,477.5807. Use this data type for calculations involving money and for fixed-point calculations where accuracy is particularly important.</I> <BR>Therefore, one limitation to this method is that what is compared must consist of numbers only. But sometimes, in calculations routine where your Username is converted to Serial, the correct serial can be in the form of Currency.
+</font> <P> <font face="Verdana">An example of the code is like this:&nbsp; 
+(even without programming knowledge, this should be understandable for all)</font><P> 
+<font face="Verdana"> <I>Dim correct As Currency, entered As Currency</I>&nbsp;&nbsp; <I>&nbsp;&nbsp; &lt;</I>--Defines "correct" and "entered" as Currency <BR><I>correct = Correct Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</I> <I>&lt;</I>--Set "correct"as the "Correct Password" <BR><I>entered = Text1.Text</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<I>&lt;</I>--Set "entered" as the password you entered <BR><I>If correct = entered Then</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<I>&lt;</I>--Compare using the Variant method <BR><I>GoTo Correct Message</I> <BR><I>Else</I> <BR><I>GoTo Wrong Message</I> <BR><I>End If</I> 
+</font>
+<P> 
+&nbsp;<P> <HR WIDTH="100%"> 
+<P> <font face="Verdana">So, does this mean that with these 8 compare methods, we can break into every single compare routine? NO 
+! This is because comparisons can be made between Currency and String, Variant and Long etc... <BR>&nbsp;</font><P> <HR WIDTH="100%"> 
+<P> &nbsp; </BODY></HTML> 

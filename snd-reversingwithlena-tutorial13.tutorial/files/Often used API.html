@@ -1,0 +1,119 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="nl-be">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>OFTEN USED API</title>
+</head>
+
+<body>
+
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana" size="4" color="#FF0000">OFTEN USED API's 
+IN REGISTRATION SCHEMES AND OTHER</font></p>
+<p align="center">&nbsp;<br>
+<font face="Verdana">Windows programs use API's to interact with the kernel. 
+Hence, also finding input from users in a registration window for example is 
+done with API's. A technique to find info on and to land in the registration 
+scheme, is to use the API's to our advantage. The API's that most used in this 
+matter are :<br>
+<br>
+<font color="#0000FF">DialogBoxes:</font> <br>
+<br>
+DialogBoxParamA<br>
+GetDlgItem <br>
+GetDlgItemInt<br>
+GetDlgItemTextA <br>
+GetWindowTextA<br>
+GetWindowWord<br>
+<br>
+<font color="#0000FF">MessageBoxes:</font> <br>
+<br>
+MessageBeep <br>
+MessageBoxA <br>
+MessageBoxExA <br>
+SendMessageA <br>
+SendDlgItemMessageA<br>
+&nbsp;</font></p>
+<p align="center"><font face="Verdana"><font color="#0000FF">Registry Access:
+</font><br>
+<br>
+RegCreateKeyA <br>
+RegDeleteKeyA <br>
+RegQueryValueA<br>
+RegQueryValueExA<br>
+RegCloseKeyA <br>
+RegOpenKeyA <br>
+<br>
+<font color="#0000FF">Reading/Writing files: </font><br>
+<br>
+ReadFile <br>
+WriteFile <br>
+CreateFileA <br>
+<br>
+<font color="#0000FF">Reading data from INI file: </font><br>
+<br>
+GetPrivateProfileStringA <br>
+GetPrivateProfileIntA <br>
+WritePrivateProfileStringA<br>
+<br>
+<font color="#0000FF">Reading data (other) :<br>
+</font><br>
+LoadStringA<br>
+lstrcmpA<br>
+MultiByteToWideChar<br>
+WideCharToMultiByte<br>
+wsprintfA <br>
+<br>
+<font color="#0000FF">Time And Date: </font><br>
+<br>
+GetFileTime<br>
+GetLocalTime <br>
+GetSystemTime <br>
+GetSystemTimeAsFileTime<br>
+SetTimer<br>
+SystemTimeToFileTime<br>
+<br>
+<font color="#0000FF">Creating a NAG-window: <br>
+</font><br>
+CreateWindowExA <br>
+ShowWindow<br>
+UpdateWindow <br>
+<br>
+<font color="#0000FF">Find messageboxtext :</font><br>
+<br>
+SendDlgItemMessageA <br>
+SendMessageA <br>
+SetDlgItemTextA <br>
+SetWindowTextA</font></p>
+<p align="center">&nbsp;</p>
+<p align="center"><font face="Verdana"><br>
+For a registration scheme,<br>
+I normally place a breakpoint in one (or all) of the next API calls :<br>
+<br>
+GetdlgItemTextA<br>
+GetWindowTextA<br>
+lstrcmpA<br>
+GetPrivateProfileStringA<br>
+GetPrivateProfileIntA<br>
+RegQueryValueExA<br>
+WritePrivateProfileStringA<br>
+WritePrivateProfileIntA<br>
+<br>
+<br>
+Do you really have no idea what API to break on or have you tried &quot;every&quot; API 
+but you don't succeed ?<br>
+---&gt; rightclick ---&gt; search for ---&gt; all intermodular calls ---&gt; rightclick ---&gt; 
+set breakpoint on every command ---&gt; click &quot;ok&quot; button from registration or 
+whatever you need to do ---&gt; you will definitely break somewhere !!!<br>
+REMARK : <br>
+If you break to soon, even before you can click the &quot;ok&quot; button, then this 
+(these) breakpoint(s) is (are) useless<br>
+and may be removed till the program lets you click the required button ;)<br>
+<br>
+<br>
+&nbsp;</font></p>
+
+</body>
+
+</html>
