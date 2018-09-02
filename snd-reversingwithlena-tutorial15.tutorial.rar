@@ -1,0 +1,636 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang="en">
+<head>
+<meta http-equiv='content-type' content='text/html; charset=utf-8' />
+<meta http-equiv='content-style-type' content='text/css' />
+<meta http-equiv='content-language' content='en' />
+<title>Tuts 4 You: Downloads</title>
+<!-- *JS* -->
+<script type='text/javascript' src='/tuts_files/e107.js'></script>
+<script type='text/javascript' src='/tuts_files/sleight_js.php'></script>
+<!-- *CSS* -->
+<!-- Theme css -->
+<link rel='stylesheet' href='/tuts_themes/e107v4a/style.css' type='text/css' media='all' />
+<link rel='stylesheet' href='/tuts_files/e107.css' type='text/css' />
+<!-- *META* -->
+<!-- commentstop meta -->
+<!-- ratings meta -->
+<link rel="stylesheet" type="text/css" href="tuts_plugins/ratings/css/rating.css" /><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script><script id='ratings_js' type="text/javascript" src="tuts_plugins/ratings/js/ratings.js"></script>
+<script type="text/javascript" src="tuts_plugins/ratings/js/global.js"></script> 
+<!-- rss_menu meta -->
+<link rel='alternate' type='application/rss+xml' title='Tuts 4 You Comments' href='http://tuts4you.com/tuts_plugins/rss_menu/rss.php?comments.2' />
+<link rel='alternate' type='application/rss+xml' title='Tuts 4 You Downloads' href='http://tuts4you.com/tuts_plugins/rss_menu/rss.php?download.2' />
+<link rel='alternate' type='application/rss+xml' title='Tuts 4 You News' href='http://tuts4you.com/tuts_plugins/rss_menu/rss.php?news.2' />
+
+<!-- Core Meta Tags -->
+<meta name="description" content="A community for researchers and reverse engineers interested in the field of Reverse Code Engineering (RCE)." />
+<meta name="keywords" content="Tuts 4 You, Tuts4You, Reverse Code Engineering, Reverse Engineering, OllyDbg, OllyDbg Plugins, OllyScript, OllyDbg Scripts, IDA Pro, IDA Pro Plugins, IDA Pro Scripts, IDA Utilities, WinDBG, Immunity Debugger, Immunity Scripts, Immunity Plugins, SoftICE, Reversing Tutorial, Reversing Paper, RCE, Unpacking, Virtual Machines, Compressors, Packers, Protectors, Debugging, Anti Debugging, API, Hooking, Rootkit, Mathematics, Cryptography, Keygenning, Disassembling, Dongles, .NET, dotNET, Python, Exploits, Malware, Loader, Memory Patching, Portable Executable, PE, Programming, Coding, Reverse Engineering Tutorials, MacOS, Linux, Amiga" />
+<meta name="copyright" content="Tuts 4 You" />
+<meta name="author" content="Teddy Rogers" />
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5009508-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<link rel='icon' href='http://tuts4you.com/favicon.ico' type='image/x-icon' />
+<link rel='shortcut icon' href='http://tuts4you.com/favicon.ico' type='image/xicon' />
+
+<!-- *PRELOAD* -->
+<script type='text/javascript'>
+<!--
+ejs_preload('/tuts_themes/e107v4a/images/','captransition.png,capdark.png,left.png,search.png,capright.png,button3.png,caplight.png,bullet3.png,topright.png,logo.png,bullet2.gif,blank.gif,bottom.png,header.png,button2.png,cap1.png,temp.png,bottomleft.png,bar.jpg,top.png,right.png,button.png,topleft.png,barr.png,fcap2.png,capleft.png,nforumcaption.png,fcap.png,barl.png,nforumcaption2.png,bottomright.png,bar.png');
+// -->
+</script>
+</head>
+<body onload="externalLinks();">
+<table style='width:100%; background-color:#E4E0E0' cellspacing='3' class='topborder'><tr><td style='text-align:left; vertical-align:bottom'>
+
+<!-- ### clock ### //-->
+<div id='Clock'>&nbsp;</div>
+<script type="text/javascript">
+<!--
+var DayNam = new Array(
+"Sunday,","Monday,","Tuesday,","Wednesday,","Thursday,","Friday,","Saturday,");
+var MnthNam = new Array(
+"January","February","March","April","May","June","July","August","September","October","November","December");
+//-->
+</script>
+
+<script type='text/javascript' src='tuts_plugins/clock_menu/clock.js'></script>
+
+<script type="text/javascript">
+window.setTimeout("tick('', '0', '', '', '', '')",150);
+</script>
+<!-- ### end clock ### //-->
+
+</td><td style='text-align:right'><form method='get' action='/search.php'>
+	<div>
+	<input class='tbox search' type='text' name='q' size='20' value='' maxlength='50' />
+	<input type='hidden' name='r' value='0' /><input type='image' src='/tuts_themes/e107v4a/images/search.png' value='Search' style='width: 18px; height: 19px; border: 0px; vertical-align: middle' name='s' />
+	</div>
+	</form></td></tr></table><table style='width:100%;' cellspacing='3' id='header'><tr><td colspan='2' style='text-align:left; vertical-align: middle;'><img src='/tuts_themes/e107v4a/images/logo.png' alt='' /> [ Tuts 4 You ]</td><td style='text-align:right'><a href='/banner.php?7' rel='external'><img src='/tuts_images/banners/aros-banner-blue.png' alt='http://www.aros.org/' style='border:0' /></a></td></tr></table><table style='width:100%' cellspacing='3'><tr><td style='width:20%;'></td><td style='width:60%;'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='1' alt='' /></td><td style='width:20%;'></td></tr><tr><td style='width:20%; vertical-align: top;'>
+<div class='spacer'>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captiontopleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopmiddle'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='3' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captionleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='18' alt='' style='display: block;' /></td>
+<td class='captionbar' style='white-space:nowrap'>Main Menu</td>
+<td class='captionend'><img src='/tuts_themes/e107v4a/images/blank.gif' width='12' height='18' alt='' style='display: block;' /></td>
+<td class='captionmain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='18' alt='' style='display: block;' /></td>
+<td class='captionright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='18' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bodyleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+<td class='bodymain'>
+
+
+<!-- Sitelinks (1) -->
+
+
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "Go back to the beginning..." href='http://www.tuts4you.com/'>Home</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "Why and what this site has to offer you..." href='http://tuts4you.com/page.php?3'>About Us</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "Check out the latest site news at Tuts 4 You..." href='/news.php'>Latest News</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "How to and how not to contact me..." href='http://tuts4you.com/contact.php'>Contact Us</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "Find all community related areas here..." href="javascript:expandit('sub_75')">Forums</a></span><br />
+
+
+<div id='sub_75' style='display:none' class='d_sublink'>
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "Interesting topics and discussions on reverse engineering..." href='http://forum.tuts4you.com/' rel='external'>Forums</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "All our site members blogs can be found here..." href='http://forum.tuts4you.com/index.php?autocom=blog' rel='external'>Blogs</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "An artists gallery just for the artists..." href='http://forum.tuts4you.com/index.php?autocom=gallery' rel='external'>Gallery</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "Various downloads related to the reversing scene..." href='http://forum.tuts4you.com/index.php?autocom=downloads' rel='external'>Downloads</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "The Lo-Fi version of the forums..." href='/../../../../tuts_plugins/wrap/wrap.php?3.'>Forums (Lo-Fi)</a></span><br />
+
+</div>
+
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "Links to friends of mine, check them out!..." href='/tuts_plugins/links_page/links.php'>Interesting Links</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a href="javascript:expandit('sub_2')">Downloads</a></span><br />
+
+
+<div id='sub_2' style='display:none' class='d_sublink'>
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "Top of the Downloads category..." href='http://www.tuts4you.com/download.php'>All Categories</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "Personal tutorial series from the likes of Lena and other authors..." href='/download.php?list.16'>Journals / Tutorial Series</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "Find all the latest and most interesting reverse engineering tutorials here..." href='/download.php?list.19'>Tutorials &amp; Papers</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "An interesting collection of files for IDA users..." href='/download.php?list.76'>Interactive Disassembler</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "Lots of files for OllyDbg..." href='/download.php?list.3'>Olly Debugger</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "Collection of tools and files for Immunity Debugger..." href='/download.php?list.72'>Immunity Debugger</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "Collection of crypto libraries, hashes; sources and examples..." href='/download.php?list.45'>Crypto Libraries and Hashes</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "Collection of good tools and utilities to assist in reverse engineering..." href='/download.php?list.34'>Tools &amp; Utilities</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "Challenge of Reverse Engineering..." href='/download.php?list.49'>ReverseMe's</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> &nbsp;&nbsp;<a title = "Archive of most available freeware & commercial packer protectors..." href='http://www.tuts4you.com/download.php?list.60'>Packer / Protector Formats</a></span><br />
+
+</div>
+
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "Check to see what polls have been active or ongoing..." href='http://www.tuts4you.com/tuts_plugins/poll/oldpolls.php'>Polls &amp; Surveys</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "Search Tuts 4 You for something specific..." href='http://tuts4you.com/search.php'>Search Engine</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "Site legal information..." href='http://www.tuts4you.com/page.php?6'>Disclaimer</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "Common site questions answered..." href='http://www.tuts4you.com/page.php?4'>F.A.Q.</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "Discover employment opportunities in your field of expertise..." href='http://www.tuts4you.com/tuts_plugins/job_search/index.php?0.list.2.1.1.0.0'>Employment</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "Buy some interesting books from Amazon..." href='/../../../../tuts_plugins/wrap/wrap.php?1.'>Bookstore</a></span><br />
+<span><img src='/tuts_themes/e107v4a/images/bullet2.gif' alt='bullet' /> <a title = "Latest upcoming events and meetings..." href='http://forum.tuts4you.com/index.php?showforum=105' rel='external'>Events</a></span><br />
+</td>
+<td class='bodyright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bottomleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+<td class='bottommain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='9' alt='' style='display: block;' /></td>
+<td class='bottomright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+</tr>
+</table>
+</div>
+
+
+
+<!-- end Site Links -->
+
+
+
+<div class='spacer'>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captiontopleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopmiddle'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='3' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captionleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='18' alt='' style='display: block;' /></td>
+<td class='captionbar' style='white-space:nowrap'>Latest Comments</td>
+<td class='captionend'><img src='/tuts_themes/e107v4a/images/blank.gif' width='12' height='18' alt='' style='display: block;' /></td>
+<td class='captionmain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='18' alt='' style='display: block;' /></td>
+<td class='captionright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='18' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bodyleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+<td class='bodymain'>	<img src="tuts_themes/e107v4a/images/bullet2.gif" alt="" style="vertical-align: middle;" /> <a href='/download.php?view.130'>[download] Reversing for Newbies 09</a><br />	Posted by <b>Somebody</b>  on 18 Feb : 14:32<br />	This tut is about NATIVE -compiled app, not P-CODE <a href='/download.php?view.130'>[ more ... ]</a><br /><br />	<img src="tuts_themes/e107v4a/images/bullet2.gif" alt="" style="vertical-align: middle;" /> <a href='/download.php?view.1252'>[download] Msieve 1.44 + GUI 1.1</a><br />	Posted by <b>Rekha</b>  on 15 Feb : 11:16<br />	I am using xeon x86 machine with 64 bit version, b <a href='/download.php?view.1252'>[ more ... ]</a><br /><br />	<img src="tuts_themes/e107v4a/images/bullet2.gif" alt="" style="vertical-align: middle;" /> <a href='/download.php?view.123'>[download] Reversing for Newbies 02</a><br />	Posted by <b>*The_ALLSTAR*</b>  on 14 Feb : 14:42<br />	I have a question pls answer for me. Analyzethis.d <a href='/download.php?view.123'>[ more ... ]</a><br /><br />	<img src="tuts_themes/e107v4a/images/bullet2.gif" alt="" style="vertical-align: middle;" /> <a href='/download.php?view.2674'>[download] StrongOD 0.2.9.561</a><br />	Posted by <b>Guest</b>  on 11 Feb : 12:36<br />	Thanks for the answer. Maybe admin/mod here can ch <a href='/download.php?view.2674'>[ more ... ]</a><br /><br />	<img src="tuts_themes/e107v4a/images/bullet2.gif" alt="" style="vertical-align: middle;" /> <a href='/download.php?view.130'>[download] Reversing for Newbies 09</a><br />	Posted by <b>lena151_</b>  on 11 Feb : 03:45<br />	Either there must be something wrong with your set <a href='/download.php?view.130'>[ more ... ]</a><br /><br /></td>
+<td class='bodyright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bottomleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+<td class='bottommain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='9' alt='' style='display: block;' /></td>
+<td class='bottomright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+<!--
+function setcook(pollid){
+	var name = "poll_"+pollid;
+	var date = new Date();
+	var value = pollid;
+	date.setTime(date.getTime()+(365*24*60*60*1000));
+	var expires = "; expires="+date.toGMTString();
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+//-->
+</script>
+
+<div class='spacer'>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captiontopleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopmiddle'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='3' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captionleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='18' alt='' style='display: block;' /></td>
+<td class='captionbar' style='white-space:nowrap'>Poll</td>
+<td class='captionend'><img src='/tuts_themes/e107v4a/images/blank.gif' width='12' height='18' alt='' style='display: block;' /></td>
+<td class='captionmain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='18' alt='' style='display: block;' /></td>
+<td class='captionright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='18' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bodyleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+<td class='bodymain'><form method='post' action='http://tuts4you.com/download.php?error.1266775864.2'>
+
+<div style='text-align:center'>
+<p>
+<br />
+<b><i>Will 3D TV be the next big 'thing' or an industry failure?</i></b>
+</p>
+<hr />
+</div>
+<p>
+<br />
+
+<input type='radio' name='votea' value='1' /><b>Yes, I would buy a 3D TV</b>
+<br /><br />
+<input type='radio' name='votea' value='2' /><b>Its just a gimmick</b>
+<br /><br />
+<input type='radio' name='votea' value='3' /><b>I don't want to wear glasses!</b>
+<br /><br />
+
+</p>
+<div style='text-align:center' class='smalltext'>
+<p>
+<input class='button' type='submit' name='pollvote' value='Submit' />
+<br /><br />
+Posted by <a href='user.php?id.1'>Teddy Rogers</a>
+<br />
+Votes: 408  <a href='comment.php?comment.poll.14'>Comments: 0</a>
+<br />
+<a href='/tuts_plugins/poll/oldpolls.php'>Previous polls</a>
+</p>
+</div>
+</form></td>
+<td class='bodyright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bottomleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+<td class='bottommain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='9' alt='' style='display: block;' /></td>
+<td class='bottomright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+</tr>
+</table>
+</div>
+
+<div class='spacer'>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captiontopleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopmiddle'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='3' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captionleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='18' alt='' style='display: block;' /></td>
+<td class='captionbar' style='white-space:nowrap'>Link to us</td>
+<td class='captionend'><img src='/tuts_themes/e107v4a/images/blank.gif' width='12' height='18' alt='' style='display: block;' /></td>
+<td class='captionmain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='18' alt='' style='display: block;' /></td>
+<td class='captionright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='18' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bodyleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+<td class='bodymain'><div style='text-align:center'>
+<a href='http://tuts4you.com/'><img src='tuts_images/tuts4youlogo.png' alt='Link to us' style='border: 0px; width: 88px; height: 31px' /></a>
+</div></td>
+<td class='bodyright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bottomleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+<td class='bottommain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='9' alt='' style='display: block;' /></td>
+<td class='bottomright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+</tr>
+</table>
+</div>
+
+<div class='spacer'>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captiontopleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopmiddle'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='3' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captionleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='18' alt='' style='display: block;' /></td>
+<td class='captionbar' style='white-space:nowrap'>Hit Counter</td>
+<td class='captionend'><img src='/tuts_themes/e107v4a/images/blank.gif' width='12' height='18' alt='' style='display: block;' /></td>
+<td class='captionmain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='18' alt='' style='display: block;' /></td>
+<td class='captionright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='18' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bodyleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+<td class='bodymain'><center><img src="/cgi-sys/Count.cgi?df=teddy.dat|display=Counter|ft=6|md=8|frgb=100;139;216|dd=A"></center></td>
+<td class='bodyright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bottomleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+<td class='bottommain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='9' alt='' style='display: block;' /></td>
+<td class='bottomright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+</tr>
+</table>
+</div>
+</td><td style='width:60%; vertical-align: top;'>
+<div class='spacer'>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captiontopleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopmiddle'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='3' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captionleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='18' alt='' style='display: block;' /></td>
+<td class='captionbar' style='white-space:nowrap'>Download Error</td>
+<td class='captionend'><img src='/tuts_themes/e107v4a/images/blank.gif' width='12' height='18' alt='' style='display: block;' /></td>
+<td class='captionmain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='18' alt='' style='display: block;' /></td>
+<td class='captionright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='18' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bodyleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+<td class='bodymain'><div style='text-align:center'>You have been prevented from downloading this file; you have exceeded your download quota</div></td>
+<td class='bodyright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bottomleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+<td class='bottommain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='9' alt='' style='display: block;' /></td>
+<td class='bottomright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+</tr>
+</table>
+</div>
+</td><td style='width:20%; vertical-align:top'>
+<div class='spacer'>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captiontopleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopmiddle'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='3' alt='' style='display: block;' /></td>
+<td class='captiontopright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='3' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='captionleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='24' height='18' alt='' style='display: block;' /></td>
+<td class='captionbar' style='white-space:nowrap'>Latest Downloads</td>
+<td class='captionend'><img src='/tuts_themes/e107v4a/images/blank.gif' width='12' height='18' alt='' style='display: block;' /></td>
+<td class='captionmain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='18' alt='' style='display: block;' /></td>
+<td class='captionright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='11' height='18' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bodyleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+<td class='bodymain'><div style='border : 0; padding : 4px; width : auto; height : 999px; overflow : auto; '><span class='smalltext'><div class='mediumtext'><b><i>(Debuggers / Disassemblers:)</i></b></div>
+		<a href='download.php?view.2860'><b>PVDasm 64Bit Disassembler 1.7a</b></a><br />
+		<b>Author: </b>Bengaly<br />The Proview (a.k.a PVDasm) Disassembler is Free, Interactive, Multi-CPU (Intel 80x86/ Chip8) that includes many features which allows the user to perform analysis on the target image file. PVDasm currently support image files of executable files (.ex <a href='download.php?view.2860'><b>[more...]</b></a><br /><b>Date: </b>20 Feb : 09:35<br />
+		<b>Filesize: </b>303.59 kb<br />
+		<b>Total Downloads: </b>62<br /><hr /><div class='mediumtext'><b><i>(Debuggers / Disassemblers:)</i></b></div>
+		<a href='download.php?view.2675'><b>PVDasm 32Bit Disassembler 1.7a</b></a><br />
+		<b>Author: </b>Bengaly<br />The Proview (a.k.a PVDasm) Disassembler is Free, Interactive, Multi-CPU (Intel 80x86/ Chip8) that includes many features which allows the user to perform analysis on the target image file. PVDasm currently support image files of executable files (.ex <a href='download.php?view.2675'><b>[more...]</b></a><br /><b>Date: </b>20 Feb : 09:35<br />
+		<b>Filesize: </b>278.74 kb<br />
+		<b>Total Downloads: </b>577<br /><hr /><div class='mediumtext'><b><i>(OllyScript - Scripts:)</i></b></div>
+		<a href='download.php?view.2859'><b>RLPack 1.0 - 1.21 Unpacker v1.2</b></a><br />
+		<b>Author: </b>LCF-AT<br /><br /><b>Date: </b>17 Feb : 15:49<br />
+		<b>Filesize: </b>86.85 kb<br />
+		<b>Total Downloads: </b>79<br /><hr /><div class='mediumtext'><b><i>(IDA Plugins:)</i></b></div>
+		<a href='download.php?view.2858'><b>PPC Altivec Plugin 1.6.6</b></a><br />
+		<b>Author: </b>Xorloser<br />PPC Altivec Plugin for IDA v5.6 which adds support for special instructions that are used by some PPC based devices. This was originally written by Dean Ashton and then updated by Takires. This is useful when disassembling Xbox360 and PS3 binaries in <a href='download.php?view.2858'><b>[more...]</b></a><br /><b>Date: </b>17 Feb : 14:12<br />
+		<b>Filesize: </b>36.94 kb<br />
+		<b>Total Downloads: </b>38<br /><hr /><div class='mediumtext'><b><i>(Keygenning / Serial Fishing:)</i></b></div>
+		<a href='download.php?view.2857'><b>Serial Fishing Arthis KeygenMe A0.2</b></a><br />
+		<b>Author: </b>Dahiphop<br />A serial fishing tutorial for Arthis KeygenMe A0.2:
+
+Language: Microsoft Visual Basic 5.0 / 6.0
+Level: 7 - Very hard<br /><b>Date: </b>16 Feb : 16:10<br />
+		<b>Filesize: </b>1.77 mb<br />
+		<b>Total Downloads: </b>268<br /><hr /><div class='mediumtext'><b><i>(IDA Plugins:)</i></b></div>
+		<a href='download.php?view.2350'><b>IDA Stealth 1.2.1</b></a><br />
+		<b>Author: </b>Jan Newger<br />IDA Stealth is a plugin which aims to hide the IDA debugger from most common anti-debugging techniques. The plugin is composed of two files, the plugin itself and a dll which is injected into the debuggee as soon as the debugger attaches to the proce <a href='download.php?view.2350'><b>[more...]</b></a><br /><b>Date: </b>16 Feb : 16:10<br />
+		<b>Filesize: </b>760.72 kb<br />
+		<b>Total Downloads: </b>1076<br /><hr /><div class='mediumtext'><b><i>(Java Reversing:)</i></b></div>
+		<a href='download.php?view.2856'><b>Java Reversing</b></a><br />
+		<b>Author: </b>Epokh<br />The following is a sample tutorial on Java reversing. The reader must know the architecture and Java JVM asm, however I will report some essentials during the article.<br /><b>Date: </b>09 Feb : 17:15<br />
+		<b>Filesize: </b>476.95 kb<br />
+		<b>Total Downloads: </b>273<br /><hr /><div class='mediumtext'><b><i>(Unpacking Tutorials:)</i></b></div>
+		<a href='download.php?view.2855'><b>RLPack 1.0 - 1.21 (Unpacking)</b></a><br />
+		<b>Author: </b>LCF-AT<br />A movie where you can exactly see how to use my script so in this movie I unpacked four different RLPack targets which different enabled protection features.<br /><b>Date: </b>09 Feb : 17:10<br />
+		<b>Filesize: </b>7.3 mb<br />
+		<b>Total Downloads: </b>361<br /><hr /><div class='mediumtext'><b><i>(OllyScript - Scripts:)</i></b></div>
+		<a href='download.php?view.2854'><b>RLPack 1.0 - 1.21 Unpacker v1.0</b></a><br />
+		<b>Author: </b>LCF-AT<br /><br /><b>Date: </b>09 Feb : 17:09<br />
+		<b>Filesize: </b>82.76 kb<br />
+		<b>Total Downloads: </b>107<br /><hr /><div class='mediumtext'><b><i>(OllyDbg Extra Tools & Utilities:)</i></b></div>
+		<a href='download.php?view.2853'><b>LoadDLL+ 0.1</b></a><br />
+		<b>Author: </b>EvOlUtIoN<br />A more advanced loaddll.exe that allows you to load DLL&#039;s in to different memory locations, so you can rebuild relocations in an easy way.<br /><b>Date: </b>06 Feb : 12:01<br />
+		<b>Filesize: </b>30.39 kb<br />
+		<b>Total Downloads: </b>219<br /><hr /><div class='mediumtext'><b><i>(Cryptography Tools:)</i></b></div>
+		<a href='download.php?view.1252'><b>Msieve 1.44 + GUI 1.1</b></a><br />
+		<b>Author: </b>Jason Papadopoulos + Anogrganix<br />Factoring is the study (half math, half engineering, half art form) of taking big numbers and expessing them as the product of smaller numbers. If I find out 15 = 3 * 5, I&#039;ve performed an integer factorization on the number 15. As the number to  <a href='download.php?view.1252'><b>[more...]</b></a><br /><b>Date: </b>05 Feb : 09:53<br />
+		<b>Filesize: </b>1.03 mb<br />
+		<b>Total Downloads: </b>4489<br /><hr /><div class='mediumtext'><b><i>(IDA Pro Disassembler and Debugger:)</i></b></div>
+		<a href='download.php?view.2682'><b>IDA Pro Disassembler 5.6</b></a><br />
+		<b>Author: </b>Hex-Rays<br />IDA Pro is a programmable, interactive, multi-processor disassembler combined with a local and remote debugger and augmented by a complete plugin programming environment.
+
+IDA Pro is in many ways unique. Its interactivity allows you to improve disa <a href='download.php?view.2682'><b>[more...]</b></a><br /><b>Date: </b>04 Feb : 11:05<br />
+		<b>Filesize: </b>26.72 mb<br />
+		<b>Total Downloads: </b>3005<br /><hr /><div class='mediumtext'><b><i>(Debuggers / Disassemblers:)</i></b></div>
+		<a href='download.php?view.2852'><b>W32Dasm 10.0</b></a><br />
+		<b>Author: </b>Killer<br />Note: This has been added to the database for posterity.
+
+Software: anti-static compilation of the best tools!
+
+List of new features:
+
+1, custom syntax highlight colors, highlight certain keywords can use color display, Good!
+2, can increase t <a href='download.php?view.2852'><b>[more...]</b></a><br /><b>Date: </b>03 Feb : 10:44<br />
+		<b>Filesize: </b>555.37 kb<br />
+		<b>Total Downloads: </b>908<br /><hr /><div class='mediumtext'><b><i>(OllyScript - Editors:)</i></b></div>
+		<a href='download.php?view.2542'><b>OllyScriptEditor 0.35</b></a><br />
+		<b>Author: </b>BriteDream<br />An editor for creating and editing scripts which can be used with the OllyScript plugin for OllyDbg.<br /><b>Date: </b>03 Feb : 10:25<br />
+		<b>Filesize: </b>12.38 mb<br />
+		<b>Total Downloads: </b>3735<br /><hr /><div class='mediumtext'><b><i>(OllyDbg Plugins:)</i></b></div>
+		<a href='download.php?view.95'><b>OllyTiper 2.0</b></a><br />
+		<b>Author: </b>Vptrlx<br />Totally remade and BUGFIXed by vptrlx.
+
+OllyTiper is a plugin for OllyDbg v1.10, to improve OllyDbg&#039;s operation. Most of the content from the KanXue patch features the &quot;to Ollydbg increase in operating functions useful shortcut keys,&quot <a href='download.php?view.95'><b>[more...]</b></a><br /><b>Date: </b>03 Feb : 10:25<br />
+		<b>Filesize: </b>39.52 kb<br />
+		<b>Total Downloads: </b>693<br /><hr /><div class='mediumtext'><b><i>(OllyDbg Plugins:)</i></b></div>
+		<a href='download.php?view.2674'><b>StrongOD 0.2.9.561</b></a><br />
+		<b>Author: </b>海风月影<br />This will be a seperate download of StrongOD as of version 0.2.4.350 because - as strange as it sounds - the developer has protected it!
+
+This plugin will now require a key for it to run and be used. You can obtain a valid key by emailing: StrongOD <a href='download.php?view.2674'><b>[more...]</b></a><br /><b>Date: </b>03 Feb : 10:22<br />
+		<b>Filesize: </b>228.52 kb<br />
+		<b>Total Downloads: </b>3552<br /><hr /><div class='mediumtext'><b><i>(OllyDbg Plugins:)</i></b></div>
+		<a href='download.php?view.2840'><b>Mapimp 0.7</b></a><br />
+		<b>Author: </b>takerZ<br />This is an open source OllyDbg plugin which will help you to import map files exported by IDA or Dede. There are many plugins using which you can perform similar actions, but mapimp:
+
+- Recognizes debugged file segments and applies names correctly <a href='download.php?view.2840'><b>[more...]</b></a><br /><b>Date: </b>26 Jan : 16:42<br />
+		<b>Filesize: </b>47.76 kb<br />
+		<b>Total Downloads: </b>513<br /><hr /><div class='mediumtext'><b><i>(OllyScript - Scripts:)</i></b></div>
+		<a href='download.php?view.2851'><b>MoleBox 2.xx Unpacker + OEP Finder v1.11</b></a><br />
+		<b>Author: </b>Zhupf<br /><br /><b>Date: </b>20 Jan : 12:31<br />
+		<b>Filesize: </b>72.41 kb<br />
+		<b>Total Downloads: </b>333<br /><hr /><div class='mediumtext'><b><i>(OllyScript - Scripts:)</i></b></div>
+		<a href='download.php?view.2850'><b>eXPressor 1.8.0.1 Unpacker</b></a><br />
+		<b>Author: </b>Pavka<br /><br /><b>Date: </b>20 Jan : 12:02<br />
+		<b>Filesize: </b>1.99 kb<br />
+		<b>Total Downloads: </b>165<br /><hr /><div class='mediumtext'><b><i>(OllyDbg Plugins:)</i></b></div>
+		<a href='download.php?view.2809'><b>HOlly 0.4 Build 90</b></a><br />
+		<b>Author: </b>High6<br />This is my OllyDbg mod named HOlly. I will be constantly adding features as I require them or they are requested. Currently it only has a multiline assembler that needs some work but I would like some input.
+
+So if I could get some input on the fol <a href='download.php?view.2809'><b>[more...]</b></a><br /><b>Date: </b>20 Jan : 00:31<br />
+		<b>Filesize: </b>64.04 kb<br />
+		<b>Total Downloads: </b>867<br /><hr /><div class='mediumtext'><b><i>(OllyScript - Scripts:)</i></b></div>
+		<a href='download.php?view.2849'><b>LIPacker 1.0 OEP Finder</b></a><br />
+		<b>Author: </b>Luck<br /><br /><b>Date: </b>19 Jan : 15:21<br />
+		<b>Filesize: </b>725 b<br />
+		<b>Total Downloads: </b>96<br /><hr /><div class='mediumtext'><b><i>(OllyDbg Plugins:)</i></b></div>
+		<a href='download.php?view.2848'><b>AnalyzeThis+ 0.24</b></a><br />
+		<b>Author: </b>SMK<br />I made some improvements to AnalyzeThis mainly to analyze a memory section which originally reports &quot;this section is not associated with any module&quot;.
+
+....
+
+Sometimes (especially when dealing with packers) you may need to run OllyDbg&#0 <a href='download.php?view.2848'><b>[more...]</b></a><br /><b>Date: </b>12 Jan : 16:15<br />
+		<b>Filesize: </b>36.85 kb<br />
+		<b>Total Downloads: </b>655<br /><hr /><div class='mediumtext'><b><i>(Debuggers / Disassemblers:)</i></b></div>
+		<a href='download.php?view.1134'><b>P32Dasm 2.6</b></a><br />
+		<b>Author: </b>Darker<br />P32Dasm is a VB PCode Decompiler. It can generate String, Numbers, Objects, Import and Export function listing. There is also Jump calculator. For NCode events is here offset listing for setting BPX. You can generate .map files which you can import t <a href='download.php?view.1134'><b>[more...]</b></a><br /><b>Date: </b>09 Jan : 08:01<br />
+		<b>Filesize: </b>262.56 kb<br />
+		<b>Total Downloads: </b>1937<br /><hr /><div class='mediumtext'><b><i>(Debuggers / Disassemblers:)</i></b></div>
+		<a href='download.php?view.2847'><b>Syser Kernel Debugger 1.99.1900.1191</b></a><br />
+		<b>Author: </b>Syser Software Inc<br />A core-level debugger with full-graphical interfaces and supports assembly debugging and source code debugging
+
+Syser Debugger is designed for the Windows NT Family which is based on the X86 platform. Syser Debugger is a core-level debugger with fu <a href='download.php?view.2847'><b>[more...]</b></a><br /><b>Date: </b>09 Jan : 07:48<br />
+		<b>Filesize: </b>4.34 mb<br />
+		<b>Total Downloads: </b>190<br /><hr /><div class='mediumtext'><b><i>(Debuggers / Disassemblers:)</i></b></div>
+		<a href='download.php?view.2846'><b>Syser Win32 Debugger 1.99.1900.1191</b></a><br />
+		<b>Author: </b>Syser Software Inc<br />A core-level debugger with full-graphical interfaces and supports assembly debugging and source code debugging
+
+Syser Debugger is designed for the Windows NT Family which is based on the X86 platform. Syser Debugger is a core-level debugger with fu <a href='download.php?view.2846'><b>[more...]</b></a><br /><b>Date: </b>09 Jan : 07:41<br />
+		<b>Filesize: </b>1.55 mb<br />
+		<b>Total Downloads: </b>150<br /><hr /><div class='mediumtext'><b><i>(Binary Analysis / Editing:)</i></b></div>
+		<a href='download.php?view.400'><b>PROTECTiON iD 6.3.5</b></a><br />
+		<b>Author: </b>CDKiLLER & TippeX<br />Features:
+
+- detection of every major PC ISO Game / Application protection
+- currently covers 475 detections, including win32/64 exe protectors & packers, .net protectors, dongles, licenses & installers
+- sector scanning CDs / DVDs for Copy Prote <a href='download.php?view.400'><b>[more...]</b></a><br /><b>Date: </b>07 Jan : 13:22<br />
+		<b>Filesize: </b>498.45 kb<br />
+		<b>Total Downloads: </b>3310<br /><hr /><div class='mediumtext'><b><i>(OllyDbg Engines / Modifications:)</i></b></div>
+		<a href='download.php?view.2845'><b>OllyDbg - EvO_DBG</b></a><br />
+		<b>Author: </b>EvOlUtIoN<br />This is my version of OllyDBG. I removed all useless plugins and put my preferred ones, and also I set-up a good configuration. With it you should be able to load any protected file (Themida for example).
+
+Sometimes you have to change some options  <a href='download.php?view.2845'><b>[more...]</b></a><br /><b>Date: </b>04 Dec : 11:25<br />
+		<b>Filesize: </b>1.84 mb<br />
+		<b>Total Downloads: </b>2339<br /><hr /><div class='mediumtext'><b><i>(OllyDbg Engines / Modifications:)</i></b></div>
+		<a href='download.php?view.1940'><b>OllyDbg 2.0.0.7 (Beta 3)</b></a><br />
+		<b>Author: </b>Oleh Yuschuk<br />OllyDbg 2.0 is a 32-bit assembler-level analyzing Degugger with intuitive interface. It is especially useful if source code is not available or when you experience problems with your compiler. 
+
+Requirements. Developed and tested mainly under Windo <a href='download.php?view.1940'><b>[more...]</b></a><br /><b>Date: </b>03 Dec : 15:26<br />
+		<b>Filesize: </b>1.08 mb<br />
+		<b>Total Downloads: </b>6796<br /><hr /><div class='mediumtext'><b><i>(OllyScript - Scripts:)</i></b></div>
+		<a href='download.php?view.2844'><b>PE Header & File Information Script v1.0</b></a><br />
+		<b>Author: </b>LCF-AT<br /><br /><b>Date: </b>03 Dec : 15:23<br />
+		<b>Filesize: </b>20.93 kb<br />
+		<b>Total Downloads: </b>310<br /><hr /><div class='mediumtext'><b><i>(OllyDbg Plugins:)</i></b></div>
+		<a href='download.php?view.2425'><b>Stealth64 1.2 (Beta)</b></a><br />
+		<b>Author: </b>Revert<br />Anti Anti and compatibility plugin for Olly 1.10 running on Vista x64.
+
+I made this little plugin to make unpacking on Vista x64 a bit more bearable ;)
+
+It has most of the know anti-anti and makes an effort to make Olly behave like it should on r <a href='download.php?view.2425'><b>[more...]</b></a><br /><b>Date: </b>03 Dec : 15:00<br />
+		<b>Filesize: </b>33.97 kb<br />
+		<b>Total Downloads: </b>1298<br /><hr /><div class='mediumtext'><b><i>(Unpacking Tutorials:)</i></b></div>
+		<a href='download.php?view.2843'><b>VMProtect 1.7 - 2.0 (Unpacking)</b></a><br />
+		<b>Author: </b>LCF-AT<br />As I promised here comes the next movie tutorial and a updated script which now also supports VMProtect 2.0. As always you can see in the movie how to use it correctly. My unpack target which I have selected was the VMProtect 2.0 Ultimate itself [Dem <a href='download.php?view.2843'><b>[more...]</b></a><br /><b>Date: </b>03 Dec : 14:56<br />
+		<b>Filesize: </b>11.91 mb<br />
+		<b>Total Downloads: </b>1154<br /><hr /><div class='mediumtext'><b><i>(OllyScript - Scripts:)</i></b></div>
+		<a href='download.php?view.2842'><b>VMProtect 1.7 - 2.0 OEP Finder + Unpack Helper v1.2</b></a><br />
+		<b>Author: </b>LCF-AT<br /><br /><b>Date: </b>03 Dec : 14:54<br />
+		<b>Filesize: </b>56.12 kb<br />
+		<b>Total Downloads: </b>327<br /><hr /><div class='mediumtext'><b><i>(IDA Plugins:)</i></b></div>
+		<a href='download.php?view.2841'><b>CodeDoctor (IDA) 0.90</b></a><br />
+		<b>Author: </b>Hnedka<br />Functions:
+
+1) Deobfuscate
+
+Select instructions in disasm window and execute this command. It will try to clear the code from junk instructions.
+
+Example:
+
+Original:
+00874372 57 PUSH EDI 
+00874373 BF 352AAF6A MOV EDI,6AAF2A35
+00874378 81E7 <a href='download.php?view.2841'><b>[more...]</b></a><br /><b>Date: </b>15 Nov : 05:38<br />
+		<b>Filesize: </b>671.4 kb<br />
+		<b>Total Downloads: </b>501<br /><hr /><div class='mediumtext'><b><i>(OllyScript - Scripts:)</i></b></div>
+		<a href='download.php?view.2839'><b>Obsidium 1.4.x.x OEP Finder + IAT Repair v0.2</b></a><br />
+		<b>Author: </b>Pavka<br /><br /><b>Date: </b>15 Nov : 05:00<br />
+		<b>Filesize: </b>3.2 kb<br />
+		<b>Total Downloads: </b>270<br /><hr /><div class='mediumtext'><b><i>(Unpacking Tutorials:)</i></b></div>
+		<a href='download.php?view.2838'><b>Themida + WinLicense 1.1.0.0 - 2.1.0.0 (Unpacking)</b></a><br />
+		<b>Author: </b>Quosego<br />This package includes the following;
+
+WL.&.TM.VM.dumper.&.IAT.CodeEnc.Fixer.v2.6.0-SnD
+A script to unpack all known versions of Winlicense and Themida using any options.
+
+The script will unpack all known Themida and Winlicense applications 
+usi <a href='download.php?view.2838'><b>[more...]</b></a><br /><b>Date: </b>15 Nov : 04:56<br />
+		<b>Filesize: </b>191.25 kb<br />
+		<b>Total Downloads: </b>1727<br /><hr /><div class='mediumtext'><b><i>(OllyScript - Scripts:)</i></b></div>
+		<a href='download.php?view.2837'><b>Themida + WinLicense 1.1.0.0 - 2.1.0.0 Dumper + IAT Repair + CodeEncrypt Repair v2.6.0</b></a><br />
+		<b>Author: </b>Quosego<br /><br /><b>Date: </b>15 Nov : 04:55<br />
+		<b>Filesize: </b>27.19 kb<br />
+		<b>Total Downloads: </b>625<br /><hr /><div class='mediumtext'><b><i>(Unpacking Tutorials:)</i></b></div>
+		<a href='download.php?view.2836'><b>VMProtect 1.7 - 1.8 (Unpacking)</b></a><br />
+		<b>Author: </b>LCF-AT<br />After a long time I`m back with a new movie tutorial and a new unpack script. This time a have chosen a theme about VMProtect especially the VMProtect version 1.7 - 1.8. For this I have created five new SWF movie tutorials where I show you how to dea <a href='download.php?view.2836'><b>[more...]</b></a><br /><b>Date: </b>15 Nov : 04:51<br />
+		<b>Filesize: </b>27.8 mb<br />
+		<b>Total Downloads: </b>7559<br /><hr /><div class='mediumtext'><b><i>(OllyScript - Scripts:)</i></b></div>
+		<a href='download.php?view.2835'><b>VMProtect 1.7 - 1.8 OEP Finder + Unpack Helper v1.0</b></a><br />
+		<b>Author: </b>LCF-AT<br /><br /><b>Date: </b>15 Nov : 04:50<br />
+		<b>Filesize: </b>35.04 kb<br />
+		<b>Total Downloads: </b>293<br /><hr /><div class='mediumtext'><b><i>(OllyDbg Plugins:)</i></b></div>
+		<a href='download.php?view.2834'><b>CodeDoctor 0.90</b></a><br />
+		<b>Author: </b>Hnedka<br />Functions:
+
+1) Deobfuscate
+
+Select instructions in disasm window and execute this command. It will try to clear the code from junk instructions.
+
+Example:
+
+Original:
+00874372    57                      PUSH EDI                                <a href='download.php?view.2834'><b>[more...]</b></a><br /><b>Date: </b>11 Nov : 15:45<br />
+		<b>Filesize: </b>667.09 kb<br />
+		<b>Total Downloads: </b>784<br /><hr /><div class='mediumtext'><b><i>(OllyDbg Plugins:)</i></b></div>
+		<a href='download.php?view.2833'><b>Attach Extended 0.1</b></a><br />
+		<b>Author: </b>Hero<br />This is a really small plugin that I have written for improving attach feature of OllyDbg.
+
+With this plugin, you can attach to process by identifying its PID directly, not only selecting process list. In addition, you can find PID of process by dr <a href='download.php?view.2833'><b>[more...]</b></a><br /><b>Date: </b>10 Nov : 16:04<br />
+		<b>Filesize: </b>7.78 kb<br />
+		<b>Total Downloads: </b>340<br /><hr /></span></div></td>
+<td class='bodyright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='3' height='1' alt='' style='display: block;' /></td>
+</tr>
+</table>
+<table cellpadding='0' cellspacing='0'>
+<tr>
+<td class='bottomleft'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+<td class='bottommain'><img src='/tuts_themes/e107v4a/images/blank.gif' width='1' height='9' alt='' style='display: block;' /></td>
+<td class='bottomright'><img src='/tuts_themes/e107v4a/images/blank.gif' width='10' height='9' alt='' style='display: block;' /></td>
+</tr>
+</table>
+</div>
+</td></tr><tr><td colspan='3' style='text-align:center' class='smalltext'>Copyright (C) 2003 - 2010 by Teddy Rogers<br /></td></tr></table><div style='text-align:center'><table style='width:100%'><tr><td style='width:30%; vertical-align:top'>&nbsp;</td><td style='width:40%; vertical-align:top'></td><td style='width:30%; vertical-align:top'>&nbsp;</td></tr></table></div><script type='text/javascript'>
+SyncWithServerTime('1266862265');
+       </script>
+</body></html>
